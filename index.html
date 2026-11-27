@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Neon Breaker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-wrapper">
+    <!-- Top HUD -->
+    <header id="hud">
+      <div class="stat">
+        <span class="label">SCORE</span>
+        <span id="score-val" class="value">0</span>
+      </div>
+      <div class="stat">
+        <span class="label">HIGH</span>
+        <span id="high-val" class="value">0</span>
+      </div>
+      <div class="stat">
+        <span class="label">LEVEL</span>
+        <span id="level-val" class="value">1</span>
+      </div>
+      <div class="stat">
+        <span class="label">SHIELDS</span>
+        <span id="lives-val" class="value">3</span>
+      </div>
+      <div class="controls-hud">
+        <button id="mute-btn" title="Toggle Sound">🔊</button>
+        <button id="pause-btn" title="Pause Game">⏸</button>
+      </div>
+    </header>
+
+    <!-- Game Canvas -->
+    <div id="canvas-container">
+      <canvas id="gameCanvas"></canvas>
+
+      <!-- Overlay Screens -->
+      <div id="overlay" class="active">
+        <h1 id="overlay-title">NEON BREAKER</h1>
+        <p id="overlay-subtitle">Break all blocks. Catch power-ups. Survive.</p>
+        
+        <div class="legend">
+          <span><b class="badge cyan">W</b> Wide</span>
+          <span><b class="badge magenta">M</b> Multi-Ball</span>
+          <span><b class="badge yellow">L</b> Laser</span>
+          <span><b class="badge green">+1</b> Shield</span>
+        </div>
+
+        <button id="start-btn">START GAME</button>
+        <p class="hint">Mouse / Touch to move • Click / Space to launch & fire</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
